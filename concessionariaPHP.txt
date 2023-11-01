@@ -1,0 +1,76 @@
+
+Código para avaliação de candidatura
+
+Este código demonstra meus conhecimentos de PHP, incluindo:
+
+Classes: definição de classes com propriedades e métodos
+Herança: herança de classes
+Construtores: inicialização de propriedades de classes
+Objetos: criação de objetos de classes
+Echo: impressão de dados no console
+Carro
+
+A classe Carro define as propriedades potencia, cor e valor. O construtor da classe Carro inicializa essas propriedades.
+
+class Carro {
+    public $potencia;
+    public $cor;
+    public $valor;
+    
+    // Construtor
+    public function __construct($potencia, $cor, $valor) {
+        $this->potencia = $potencia;
+        $this->cor = $cor;
+        $this->valor = $valor;
+    }
+}
+
+CarroUsado
+
+A classe CarroUsado herda da classe Carro. Além das propriedades da classe Carro, a classe CarroUsado define a propriedade anoFabricacao. O construtor da classe CarroUsado inicializa todas as propriedades da classe Carro e a propriedade anoFabricacao.
+
+class CarroUsado extends Carro {
+    public $anoFabricacao;
+    
+    // Construtor
+    public function __construct($anoFabricacao, $potencia, $cor, $valor) {
+        parent::__construct($potencia, $cor, $valor);
+        $this->anoFabricacao = $anoFabricacao;
+    }
+}
+
+
+Exemplos
+
+No final do código, duas instâncias das classes Carro e CarroUsado são criadas. As propriedades dessas instâncias são então exibidas no console.
+
+
+// Carro novo
+$carroNovo = new Carro(200, 'Prata', 50000);
+echo "Carro Novo\n";
+echo "Potência: " . $carroNovo->potencia . " cv\n";
+echo "Cor: " . $carroNovo->cor . "\n";
+echo "Valor: R$ " . $carroNovo->valor . "\n\n";
+
+// Carro usado
+$carroUsado = new CarroUsado(2018, 150, 'Preto', 30000);
+echo "Carro Usado\n";
+echo "Ano de fabricação: " . $carroUsado->anoFabricacao . "\n";
+echo "Potência: " . $carroUsado->potencia . " cv\n";
+echo "Cor: " . $carroUsado->cor . "\n";
+echo "Valor: R$ " . $carroUsado->valor . "\n";
+Use o código com cuidado. Saiba mais
+Resultados
+
+O código produzirá o seguinte resultado:
+
+Carro Novo
+Potência: 200 cv
+Cor: Prata
+Valor: R$ 50.000,00
+
+Carro Usado
+Ano de fabricação: 2018
+Potência: 150 cv
+Cor: Preto
+Valor: R$ 30.000,00
