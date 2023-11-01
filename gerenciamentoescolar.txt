@@ -1,0 +1,37 @@
+Defina a classe Aluno
+
+No arquivo PHP, comece definindo a classe Aluno usando o código abaixo:
+class Aluno {
+    private $nome;
+    private $turma;
+    private $professor;
+    private $notas;
+
+    // Construtor da classe
+    public function __construct($nome, $turma, $professor, $notas) {
+        $this->nome = $nome;
+        $this->turma = $turma;
+        $this->professor = $professor;
+        $this->notas = $notas;
+    }
+
+    // Métodos para calcular a média e verificar a situação do aluno
+}
+
+Implemente os métodos da classe Aluno
+
+Dentro da classe Aluno, adicione os métodos para calcular a média das notas e verificar a situação do aluno (aprovado, recuperação ou reprovado). Você pode usar o código fornecido anteriormente como base.
+
+Crie um objeto Aluno e exiba as informações
+
+Depois de implementar os métodos da classe Aluno, você pode criar um objeto Aluno, fornecendo os dados necessários, e exibir as informações usando o código a seguir:
+$aluno = new Aluno("João", "8A", "Maria", [7, 8, 6, 9, 7]);
+$aluno->exibirInformacoes();
+
+Teste o código
+
+Salve o arquivo PHP e abra o terminal.
+Navegue até o diretório onde o arquivo está localizado.
+Execute o seguinte comando para executar o programa PHP:
+php gerenciamentoescolar.php
+A saída será exibida no terminal, mostrando as informações do aluno.
